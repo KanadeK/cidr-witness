@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cidr-witness"
+version = "0.1.0"
+description = "Review effective IPv4 and IPv6 allowlist changes with exact coverage and witnesses"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "KanadeK"}]
+dependencies = []
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+
+[project.scripts]
+cidr-witness = "cidr_witness.cli:main"
+
+[project.urls]
+Repository = "https://github.com/KanadeK/cidr-witness"
+Issues = "https://github.com/KanadeK/cidr-witness/issues"
+
+[tool.setuptools.packages.find]
+include = ["cidr_witness*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]

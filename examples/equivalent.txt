@@ -1,0 +1,4 @@
+# Same coverage despite split IPv4 and expanded IPv6 spelling.
+192.0.2.0/26
+192.0.2.64/26
+2001:0db8:0000:0000:0000:0000:0000:0000/127
